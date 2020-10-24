@@ -6,13 +6,13 @@
   <img src={avatar} alt="user" />
   <div class="title">
     <h3 class="name">
-      <slot name="name">User Undefined</slot>
+      <slot name="user">User Undefined</slot>
     </h3>
     <h4>Verified Buyer</h4>
   </div>
 
   <blockquote>
-    <slot name="review">Review Undefined</slot>
+    <slot>Review Undefined</slot>
   </blockquote>
 </div>
 

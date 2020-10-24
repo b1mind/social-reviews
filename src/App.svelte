@@ -20,22 +20,20 @@
 
   <section class="reviews">
     <Card avatar="https://unsplash.it/50?random=2">
-      <span slot="name">Brent Woods</span>
-      <span slot="review">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget
-        malesuada. Sed porttitor lectus nibh.</span>
+      <span slot="user">Brent Woods</span>
+      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Sed porttitor
+      lectus nibh.
     </Card>
 
     <Card>
-      <span slot="name">Kyle Wds</span>
-      <span slot="review">
-        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere
-        blandit.</span>
+      <span slot="user">Kyle Wds</span>
+      Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit.
     </Card>
 
     <Card avatar="https://unsplash.it/50?random=3">
-      <span slot="name">Kevin Powell</span>
-      <span slot="review">Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit met
-        nisl tempus convallis quis ac lectus.</span>
+      <span slot="user">Kevin Powell</span>
+      Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit met nisl tempus convallis
+      quis ac lectus.
     </Card>
   </section>
 </main>
