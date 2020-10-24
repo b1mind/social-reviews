@@ -5,7 +5,7 @@
 
 <main>
   <section class="header">
-    <h1>Some big arse headline because why not</h1>
+    <h1>Some big arse headline because why not.</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et impedit dolorem molestias alias aliquam aut
       iure doloribus tempore praesentium! Culpa laudantium enim quam tempore. Totam enim aperiam dolorem?
@@ -15,23 +15,23 @@
   <section class="ratings">
     <Rating stars={4} totalStars={5}>KP News</Rating>
     <Rating stars={3}>Tech Reviews</Rating>
-    <Rating>Social Swamps</Rating>
+    <Rating>Social Swamp</Rating>
   </section>
 
   <section class="reviews">
     <Card avatar="https://unsplash.it/50?random=2">
-      <span slot="user">Brent Woods</span>
+      <span slot="user">Brent Sux</span>
       Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Sed porttitor
       lectus nibh.
     </Card>
 
     <Card>
-      <span slot="user">Kyle Wds</span>
+      <span slot="user">Kyle Wads</span>
       Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit.
     </Card>
 
     <Card avatar="https://unsplash.it/50?random=3">
-      <span slot="user">Kevin Powell</span>
+      <span slot="user">PB Powell</span>
       Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit met nisl tempus convallis
       quis ac lectus.
     </Card>
@@ -50,11 +50,10 @@
       'header ratings'
       'reviews reviews';
     gap: 2rem 0;
-    // grid-template-columns: 1fr 1r;
     align-items: center;
 
     @media (max-width: $mediaLrg) {
-      margin: 1rem;
+      padding: 0 1rem;
     }
 
     @media (max-width: $mediaMed) {
@@ -70,6 +69,7 @@
   .header {
     max-width: 50ch;
     grid-area: header;
+    color: #7c7c7c;
 
     h1 {
       margin: 0;

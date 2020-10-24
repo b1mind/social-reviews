@@ -1,6 +1,6 @@
 :root {
   --clr: #511f50;
-  --clr-alt: #954b81;
+  --clr-alt: #ca5e98;
   --clr-light: #f7f2f8;
   --clr-white: white;
 }
@@ -21,7 +21,12 @@ body {
   min-height: 100%;
   color: black;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+    sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {

@@ -3,7 +3,7 @@
 </script>
 
 <div class="card">
-  <img src={avatar} alt="user" />
+  <img src={avatar} alt="user" width="100%" height="100%" />
   <div class="title">
     <h3 class="name">
       <slot name="user">User Undefined</slot>

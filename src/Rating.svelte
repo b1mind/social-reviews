@@ -16,14 +16,10 @@
   </ul>
 
   <div class="text">
-    Rated
-
-    {stars}/{totalStars}
-    stars by
-
-    <h3>
+    <span> Rated {stars}/{totalStars} stars by </span>
+    <h2>
       <slot>Undefined Name</slot>
-    </h3>
+    </h2>
   </div>
 </div>
 
@@ -38,9 +34,11 @@
     align-items: center;
     background: var(--clr-light);
     border-radius: 10px;
+
     &:nth-child(2) {
       margin-left: 3rem;
     }
+
     &:nth-child(3) {
       margin-left: 6rem;
     }
@@ -60,19 +58,25 @@
 
   .stars {
     width: max-content;
+    margin-right: 5px;
     display: flex;
 
     li {
       max-height: 16px;
-      padding: 0 10px;
+      padding: 0 5px;
       color: goldenrod;
       /* background: grey;
       border-radius: 50% */
     }
+
+    @media (max-width: $mediaMed) {
+      margin-bottom: 0.75rem;
+    }
   }
 
   .text {
-    h3 {
+    color: var(--clr);
+    h2 {
       margin: 0;
       display: inline-block;
       font-size: 1rem;
