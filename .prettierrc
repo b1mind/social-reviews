@@ -6,5 +6,5 @@
   "semi": false,
   "singleQuote": true,
   "endOfLine": "auto",
-  "printWidth": 200
+  "printWidth": 120
 }

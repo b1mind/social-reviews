@@ -1,56 +1,98 @@
 <script>
-  import Pug from './Pug.svelte'
-  export let userName
-  export let age
-
-  let val = 420
-  let count = 0
+  import Rating from './Rating.svelte'
+  import Card from './Card.svelte'
 </script>
 
 <main>
-  <h1>This is a {val} test smoke it</h1>
-  <button on:click={() => count++}>clickMe {count}</button>
+  <section class="header">
+    <h1>Some big arse headline because why not</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores et impedit dolorem molestias alias aliquam aut
+      iure doloribus tempore praesentium! Culpa laudantium enim quam tempore. Totam enim aperiam dolorem?
+    </p>
+  </section>
 
-  {#if userName}
-    <h2>Hello {userName} you are {age} years old</h2>
-  {:else}
-    <h2>Hello Nerd</h2>
-  {/if}
+  <section class="ratings">
+    <Rating stars={4} totalStars={5}>KP News</Rating>
+    <Rating stars={3}>Tech Reviews</Rating>
+    <Rating>Social Swamps</Rating>
+  </section>
 
-  <aside>
-    <p>see you on the other side</p>
-    <Pug {count} />
-  </aside>
+  <section class="reviews">
+    <Card avatar="https://unsplash.it/50?random=2">
+      <span slot="name">Brent Woods</span>
+      <span slot="review">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget
+        malesuada. Sed porttitor lectus nibh.</span>
+    </Card>
+
+    <Card>
+      <span slot="name">Kyle Wds</span>
+      <span slot="review">
+        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere
+        blandit.</span>
+    </Card>
+
+    <Card avatar="https://unsplash.it/50?random=3">
+      <span slot="name">Kevin Powell</span>
+      <span slot="review">Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit met
+        nisl tempus convallis quis ac lectus.</span>
+    </Card>
+  </section>
 </main>
 
 <style lang="scss">
-  main {
-    max-width: 320px;
-    margin: 0 auto;
-    padding: 1em;
-    text-align: center;
+  @import './src/vars.scss';
 
-    h2 {
-      color: var(--clr);
-      font-weight: 700;
+  main {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template:
+      'header ratings'
+      'reviews reviews';
+    gap: 2rem 0;
+    // grid-template-columns: 1fr 1r;
+    align-items: center;
+
+    @media (max-width: $mediaLrg) {
+      margin: 1rem;
     }
 
-    @media (min-width: 640px) {
-      max-width: none;
-      h2 {
-        color: var(--clrAlt);
-      }
+    @media (max-width: $mediaMed) {
+      grid-template:
+        'header'
+        'ratings'
+        'reviews';
+      justify-items: center;
+      text-align: center;
     }
   }
 
-  h1 {
-    color: red;
-    text-transform: uppercase;
-    font-weight: 100;
+  .header {
+    max-width: 50ch;
+    grid-area: header;
 
-    @media (min-width: 640px) {
-      color: white;
-      font-size: 4rem;
+    h1 {
+      margin: 0;
+      color: var(--clr);
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  .ratings {
+    grid-area: ratings;
+  }
+
+  .reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: $mediaLrg) {
+      justify-content: space-evenly;
     }
   }
 </style>
