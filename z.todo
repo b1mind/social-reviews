@@ -1,4 +1,7 @@
 Todo:
+  ☐ add quotes pseudo for card reviews
+  ☐ responsive svg backgrounds
 
 
 FixMe:
+  ☐ combine media query not working! is it scss vars?
