@@ -13,24 +13,24 @@
   </section>
 
   <section class="ratings">
-    <Rating stars={4} totalStars={5}>KP News</Rating>
-    <Rating stars={3}>Tech Reviews</Rating>
     <Rating>Social Swamp</Rating>
+    <Rating stars={4} totalStars={5}>Kp News</Rating>
+    <Rating stars={3}>Tech Reviews</Rating>
   </section>
 
   <section class="reviews">
-    <Card avatar="https://unsplash.it/50?random=2">
-      <span slot="user">Brent Sux</span>
-      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Sed porttitor
-      lectus nibh.
-    </Card>
-
     <Card>
       <span slot="user">Kyle Wads</span>
       Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit.
     </Card>
 
-    <Card avatar="https://unsplash.it/50?random=3">
+    <Card avatar="https://picsum.photos/50/50?random=2">
+      <span slot="user">Brent Sux</span>
+      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Sed porttitor
+      lectus nibh.
+    </Card>
+
+    <Card avatar="https://picsum.photos/50/50?random=3">
       <span slot="user">PB Powell</span>
       Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit met nisl tempus convallis
       quis ac lectus.
@@ -39,24 +39,21 @@
 </main>
 
 <style lang="scss">
-  @import './src/vars.scss';
+  @import './vars.scss';
 
   main {
     position: relative;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 100px auto;
     display: grid;
     grid-template:
       'header ratings'
       'reviews reviews';
-    gap: 2rem 0;
+    gap: 3rem 0;
     align-items: center;
 
-    @media (max-width: $mediaLrg) {
-      padding: 0 1rem;
-    }
-
     @media (max-width: $mediaMed) {
+      margin: 30px auto;
       grid-template:
         'header'
         'ratings'
@@ -64,10 +61,14 @@
       justify-items: center;
       text-align: center;
     }
+
+    @media (max-width: $mediaLrg) {
+      padding: 0 1rem;
+    }
   }
 
   .header {
-    max-width: 50ch;
+    max-width: 35ch;
     grid-area: header;
     color: #7c7c7c;
 
@@ -75,6 +76,7 @@
       margin: 0;
       color: var(--clr);
       font-size: 3rem;
+      font-weight: 800;
       line-height: 1;
     }
   }
@@ -90,7 +92,7 @@
     justify-content: space-between;
 
     @media (max-width: $mediaLrg) {
-      justify-content: space-evenly;
+      justify-content: space-around;
     }
   }
 </style>

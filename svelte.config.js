@@ -6,11 +6,11 @@ const createPreprocess = () => [
     pug: true,
     postcss: {
       plugins: [
-        require('postcss-combine-media-query'),
         require('autoprefixer')({
           grid: 'autoplace',
           overrideBrowserslist: ['> 1%', 'last 2 versions', 'ie >= 11'],
         }),
+        require('postcss-combine-media-query'),
       ]
     }
   }),

@@ -16,22 +16,23 @@
   </ul>
 
   <div class="text">
-    <span> Rated {stars}/{totalStars} stars by </span>
     <h2>
+      <span> Rated {stars}/{totalStars} stars by </span>
       <slot>Undefined Name</slot>
     </h2>
   </div>
 </div>
 
 <style type="text/scss">
-  @import './src/vars.scss';
+  @import './vars.scss';
 
   .rating {
-    max-width: 510px;
+    max-width: 450px;
     margin-bottom: 1rem;
     padding: 1em;
     display: flex;
     align-items: center;
+    font-size: 0.9rem;
     background: var(--clr-light);
     border-radius: 10px;
 
@@ -77,9 +78,10 @@
   .text {
     color: var(--clr);
     h2 {
-      margin: 0;
+      margin: 0.3rem 0 0 0;
       display: inline-block;
-      font-size: 1rem;
+      font-size: 0.85rem;
+      font-weight: bold;
     }
   }
 </style>

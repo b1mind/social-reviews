@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700;900&display=swap');
+
 :root {
   --clr: #511f50;
   --clr-alt: #ca5e98;
@@ -11,6 +13,11 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  font-size: 0.95rem;
+}
+
 body {
   position: relative;
   width: 100%;
@@ -19,14 +26,14 @@ body {
 
 body {
   min-height: 100%;
-  color: black;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
-    sans-serif;
+  color: black;
+  font-family: 'Spartan', Roboto, 'Helvetica Neue', sans-serif;
 }
 
 img {
   max-width: 100%;
+  display: inline-block;
 }
 
 a {
