@@ -37,7 +37,7 @@
     text-align: left;
     background: var(--clr);
     border-radius: 10px;
-    z-index: -1;
+    overflow: hidden;
 
     img {
       width: 50px;
@@ -51,6 +51,7 @@
       position: relative;
       grid-area: review;
       align-self: flex-start;
+      z-index: 1;
 
       &::before {
         content: '\201C';
@@ -62,7 +63,7 @@
         color: var(--clr-alt);
         font-size: 9rem;
         opacity: 0.25;
-        z-index: -1;
+        z-index: 0;
       }
     }
 
