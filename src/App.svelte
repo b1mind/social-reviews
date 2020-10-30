@@ -77,7 +77,7 @@
       color: var(--clr);
       font-size: 3rem;
       font-weight: 800;
-      line-height: 1;
+      line-height: 1.2;
     }
   }
 
